@@ -17,7 +17,7 @@ import javax.sql.DataSource;
  * @author bhj
  */
 @Configuration
-public class HotelUseerAcmConfig {
+public class HotelUserAcmConfig {
 
     @NacosValue(value = "${spring.datasource.username}")
     private String userName;

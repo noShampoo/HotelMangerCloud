@@ -84,4 +84,11 @@ public interface UserService {
      * @throws InnerErrorException
      */
     public List<UserVO> queryUser(String name, int page, int size) throws InnerErrorException;
+
+    /**
+     * 查询所有普通用户
+     * @return
+     * @throws InnerErrorException
+     */
+    public List<UserVO> queryAllNormalUser()throws InnerErrorException;
 }

@@ -261,4 +261,23 @@ public class UserServiceImpl implements UserService {
             throw new InnerErrorException("queryAllUser occur exception.", e);
         }
     }
+
+    @Override
+    public List<UserVO> queryAllNormalUser() throws InnerErrorException {
+        try {
+            UserDTO userDTO = UserDTO.builder()
+                    .status(UniversalConstant.USER_TABLE_STATUS_USING)
+                    .type(UniversalConstant.USER_TABLE_TYPE_NORMAL)
+                    .build();
+            List<UserDO> result = userMapper.findAll(userDTO);
+            return result.stream().map(temp -> UserVO.builder()
+                    .user(temp.getUser())
+                    .name(temp.getName())
+                    .type(temp.getType())
+                    .build()).collect(Collectors.toList());
+        } catch (Exception e) {
+            log.error("queryAllNormalUser occur exception.", e);
+            throw new InnerErrorException("queryAllNormalUser occur exception.");
+        }
+    }
 }
