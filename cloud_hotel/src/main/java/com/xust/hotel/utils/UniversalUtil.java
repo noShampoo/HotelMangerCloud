@@ -1,4 +1,4 @@
-package com.xust.hotel.user.common.utils;
+package com.xust.hotel.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;

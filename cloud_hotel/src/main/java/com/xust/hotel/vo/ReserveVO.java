@@ -1,4 +1,4 @@
-package com.xust.hotel.user.common.vo;
+package com.xust.hotel.vo;
 
 import com.alibaba.fastjson.JSONObject;
 import com.xust.hotel.common.dto.BasePojo;
